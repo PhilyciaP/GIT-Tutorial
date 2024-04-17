@@ -1,27 +1,38 @@
 # GIT-Tutorial
+## Introduction
+Git is a version control system that is used by many Computer Science students and developers that manage and track changes in projects. Git is essential for efficient collaboration and project management. In this tutorial, we will be covering some of the basics of Git with examples to help get you started 
+
+## Installing Git 
+Before you can start using Git, you need to make sure that you have it installed in your system. It is available for Windows, macOS, and Linux. Download the installer for your operaitng system from the Git wesbite [https://git-scm.com/downloads](https://git-scm.com/downloads)
+
+To check to see if it has installed, open your terminal, command prompt, or GitBash and run the command:
+```
+git --version
+```
+<img width="167" alt="git version" src="https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/88a0cbc5-d8ce-4a55-a04d-90018f076b79">
+
+## Configuring Git
+After installing Git, you will need to configure it with some information such as your name and email. Run the commands:
+```
+git config --global user.name "Your Name"
+git config --globel user.email "your@email.com"
+```
+In this case, make sure to insert your actual name and email into the quotation marks.
+
+<img width="284" alt="git config" src="https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/cd78935d-8ac4-45a7-9542-1a722224395e">
+
 ## Repository 
 ### Creating a Repository 
-__Repository__: A repository is a collection of files of various versions of a Project
-* Create a folder for your project on the local hard drive and name it as needed 
-* Use __cd__ to change the directory to the folder you created 
-* Type in __git init__ to initialize a new Git repository in the current repository you are in 
-### Checking the Status of the Repository
-* Use git status to examine/check the current status of the repository 
-* With the new repository the output should be:
+A Git __repository__ (or repo)is a collection of files of various versions of a Project. Create a folder for your project on the local hard drive and name it as needed. We will start by creating a new directory to which you can use the command ```mkdir```. Use ```cd``` to change the directory to the folder you created. To initialize a new Git repository in the current repository you are in, type in ```git init```. It should look something like:
 
-On branch master 
+<img width="376" alt="repo example" src="https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/b41b579d-53bf-4998-9cdd-c9c8849047e7">
 
-No commits yet 
-
-nothing added to commit (use __git add__ to track)
-* __git add <file>__ will add a specific file to the staging area
-* __git add__ will add all modified and new files to the staging area
-
-### Cloning a Repository → having a local copy of the repository 
-1. Go to GitHub.com
-2. Click the green dropdown button where it says “<> Code”
-3. Copy URL
-4. Use __git clone__ ___insert URL___ 
+### Cloning a Repository
+Cloning a repository allows you to bring remote repositories onto your local machine, enabling you to work on projects, collaborate with others, and maintain backups of important codebases. 
+First, find the URL of the repository that you want to clone from Github. Then, type:
+```
+git clone pasteURLhere
+```
 
 ### Working Tree 
 * The working tree tracks the files, folders, and the changes that are made inside the .git folder
