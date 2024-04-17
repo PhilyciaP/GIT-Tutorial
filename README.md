@@ -31,8 +31,10 @@ A Git __repository__ (or repo)is a collection of files of various versions of a 
 Cloning a repository allows you to bring remote repositories onto your local machine, enabling you to work on projects, collaborate with others, and maintain backups of important codebases. 
 First, find the URL of the repository that you want to clone from Github. Then, type:
 ```
-git clone pasteURLhere
+git clone https://github.com/paste_URL_here/directoryName
 ```
+
+add/touch, commit, status, start
 
 ### Working Tree 
 * The working tree tracks the files, folders, and the changes that are made inside the .git folder
