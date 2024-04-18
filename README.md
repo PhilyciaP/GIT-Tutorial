@@ -23,7 +23,7 @@ In this case, make sure to insert your actual name and email into the quotation 
 
 ## Repository 
 ### Creating a Repository 
-A Git __repository__ (or repo)is a collection of files of various versions of a Project. Create a folder for your project on the local hard drive and name it as needed. We will start by creating a new directory to which you can use the command ```mkdir```. Use ```cd``` to change the directory to the folder you created. To initialize a new Git repository in the current repository you are in, type in ```git init```. It should look something like:
+A Git __repository__ (or repo) is a collection of files of various versions of a Project. Create a folder for your project on the local hard drive and name it as needed. We will start by creating a new directory to which you can use the command ```mkdir```. Use ```cd``` to change the directory to the folder you created. To initialize a new Git repository in the current repository you are in, type in ```git init```. It should look something like:
 
 <img width="376" alt="repo example" src="https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/b41b579d-53bf-4998-9cdd-c9c8849047e7">
 
@@ -34,7 +34,30 @@ First, find the URL of the repository that you want to clone from Github. Then, 
 git clone https://github.com/paste_URL_here/directoryName
 ```
 
-add/touch, commit, status, start
+ls, add/touch, echo, commit, status, start
+### Creating and Keeping Track Files
+To check what files are in your repository, you can use the command __ls__
+To create a new file, you are going to use the command:
+```
+touch filename
+```
+To add the new file into the repository, use the command:
+```
+git add filename
+```
+If you want to create a simple text file and edit in the terminal, command prompt, or Gitbash, you can use the command:
+```
+echo "type message here" > filename.txt
+```
+In this case, to open this text file, you are going to use the command:
+```
+start filename.txt
+```
+In the example I have provided below, you can see that at the top after using the command __ls__, it brought up the file that I had added before, which is the __courseOne.txt__. Next, I created a new course to which I named it __courseTwo.txt__ and added it to my repo. Then, we can see that it has been added correctly since it popped up after using __ls__ again. By using the command __start__, another window will pop up where I am able to edit the text file. I also use the __echo__ command where it allowed me to edit within Gitbash as well. 
+
+<img width="365" alt="git files" src="https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/921589c1-4b11-4605-a056-600cd1d100ec">
+<img width="290" alt="git echo" src="https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/d57da6d1-19ef-4265-9295-c7a8dc2d7ce8">
+
 
 ### Working Tree 
 * The working tree tracks the files, folders, and the changes that are made inside the .git folder
