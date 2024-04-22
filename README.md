@@ -34,16 +34,15 @@ First, find the URL of the repository that you want to clone from Github. Then, 
 git clone https://github.com/paste_URL_here/directoryName
 ```
 
-ls, add/touch, echo, commit, status, start
 ### Creating and Keeping Track Files
 To check what files are in your repository, you can use the command __ls__
 To create a new file, you are going to use the command:
 ```
-touch filename
+touch filename.txt
 ```
 To add the new file into the repository, use the command:
 ```
-git add filename
+git add filename.txt
 ```
 If you want to create a simple text file and edit in the terminal, command prompt, or Gitbash, you can use the command:
 ```
@@ -53,27 +52,15 @@ In this case, to open this text file, you are going to use the command:
 ```
 start filename.txt
 ```
-In the example I have provided below, you can see that at the top after using the command __ls__, it brought up the file that I had added before, which is the __courseOne.txt__. Next, I created a new course to which I named it __courseTwo.txt__ and added it to my repo. Then, we can see that it has been added correctly since it popped up after using __ls__ again. By using the command __start__, another window will pop up where I am able to edit the text file. I also use the __echo__ command where it allowed me to edit within Gitbash as well. 
-
 <img width="365" alt="git files" src="https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/921589c1-4b11-4605-a056-600cd1d100ec">
-<img width="290" alt="git echo" src="https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/d57da6d1-19ef-4265-9295-c7a8dc2d7ce8">
 
+### Commit and Commit Graph 
+saving any changes that were made the history; it will keep track of what changes were made by who and when 
+* Use__git commit -m__ to create a new commit with changes along with a message with description of changes made
+#### Commit graph: '
+represents all the data 
+* By using __git graph__ it allows you to view all of the history in the repo. The history consists of ___nodes___ which show each individual commit that was pushed. These commits have a unique ___hash___. A hash is a hexadecimal string that contains 40 characters but usually in the git graph, will only show the first 7
 
-### Working Tree 
-* The working tree tracks the files, folders, and the changes that are made inside the .git folder
-  * Use __ls__ to check the current repository/directory contents, giving you a list of files/folders. Since this is a new repo, there will be nothing there
-  * You can also use __ls -a__ in order to show all the files, including the hidden ones
-  * You can use __touch__ ___filename___ to create a new file in the repo. Note that the files in your repository folder are the working tree
-* Stages in the working tree:
-  * __Untracked__: the Git repo is not able to track the file; the file is never staged nor committed
-  * __Tracked__: the Git repo is able to track the file; the file is committed but not staged in the working directory
-  * __Staged__: the file is ready to be committed and placed in the staging area 
-
-### Remote Repository:  versions of your project that can be accessed through the internet or network; repo stored on GitHub, not on your computer 
-Commands to create remote repo:
-* __git remote add origin <your_repository_URL>__
-* __git branch -M main__
-* __git push -u origin main__
 
 ### Branch: allows you to work on separate things until everything needs to be merged together 
 * __git branch__ will list out all of the branches in the repository 
@@ -86,8 +73,7 @@ Commands to create remote repo:
 #### Commit graph: represents all the data 
 * By using __git graph__ it allows you to view all of the history in the repo. The history consists of ___nodes___ which show each individual commit that was pushed. These commits have a unique ___hash___. A hash is a hexadecimal string that contains 40 characters but usually in the git graph, will only show the first 7
 
-### Commit: saving any changes that were made the history; it will keep track of what changes were made by who and when 
-* Use__git commit -m__ to create a new commit with changes along with a message with description of changes made 
+
 
 ### Push: pushing changes that you made to repository; uploading changes to the servers 
 * __git push__ pushes commits to the remote repository
