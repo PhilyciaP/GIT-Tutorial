@@ -84,14 +84,14 @@ git checkout branch_name
 ```
 ![git branch](https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/41a33275-5d2f-4ea3-95ce-2774e44fa04d)
 
-#### Merge 
+### Merge 
 After you are done making changes in that branch and are ready to combine those changes to the master branch, you are going to use __git checkout master__ to switch back to the master branch. Once you are back in the master branch, you are going to __merge__ the branch by running the command:
 ```
 git merge branch_name
 ```
 
 
-### Stash: 
+### Stash 
 To __stash__ allows you to save and switch to another task without having to fully commit your changes if you are not ready. Run the command:
 ```
 git stash
@@ -114,8 +114,12 @@ git remote add origin <paste_repository_URL>
 ```
 git push -u origin main
 ```
+__Note:__ The command in Step 3 is telling Git to link your local master to the remote main, to which you will only need to do that step once. Afterwards, you can simply use the command:
+```
+git push
+```
 
-### Pull: 
+### Pull
 __Pulling__ allows you to take changes from others to keep the repository up to date. You are ___downloading___ the changes to the server. To fetch the changes from the remote repository and merge with the current branch, use the command:
 ```
 git pull
