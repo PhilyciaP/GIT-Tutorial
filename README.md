@@ -55,42 +55,72 @@ start filename.txt
 <img width="365" alt="git files" src="https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/921589c1-4b11-4605-a056-600cd1d100ec">
 
 ### Commit and Commit Graph 
-saving any changes that were made the history; it will keep track of what changes were made by who and when 
-* Use__git commit -m__ to create a new commit with changes along with a message with description of changes made
-#### Commit graph: '
-represents all the data 
-* By using __git graph__ it allows you to view all of the history in the repo. The history consists of ___nodes___ which show each individual commit that was pushed. These commits have a unique ___hash___. A hash is a hexadecimal string that contains 40 characters but usually in the git graph, will only show the first 7
+To __commit__ allows you to savie any changes that were made the history and it will keep track of what changes were made by who and when. It also allows you to keep track of the changes you made by adding a description of said change. 
+To commit to your repository, use the command:
+```
+git commit -m "insert message here"
+```
+The __commit graph__ represents all the data and allows you to view all of the history in the repo. The history consists of ___nodes___ which show each individual commit that was pushed. These commits have a unique ___hash___. A hash is a hexadecimal string that contains 40 characters but usually in the git graph, will only show the first 7. 
+To use this command, run:
+```
+git log
+```
+![Screenshot 2024-04-23 073613](https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/dc935d8c-086a-4b81-ad99-7d55869ed026)
 
 
-### Branch: allows you to work on separate things until everything needs to be merged together 
-* __git branch__ will list out all of the branches in the repository 
-* __git branch <branch_name>__ will create a new branch 
+### Branching
+__Branching__ allows you to work on separate things until everything needs to be merged together. It also allows you to make specific changes without affecting the __master branch__.
+To list out all of the branches in your repository, run:
+```
+git branch
+```
+To create a new branch, use the command:
+```
+git branch branch_name
+```
+To switch branches, run:
+```
+git checkout branch_name
+```
+![git branch](https://github.com/PhilyciaP/GIT-Tutorial/assets/94141468/41a33275-5d2f-4ea3-95ce-2774e44fa04d)
 
-### Stash: stashes the changes in the staging area, thus allowing you to switch to different branches or commits without fully committing
-* __git stash__
-* __git stash pop__ allows you to release any stashes you saved so that you could pull any recent changes 
-
-#### Commit graph: represents all the data 
-* By using __git graph__ it allows you to view all of the history in the repo. The history consists of ___nodes___ which show each individual commit that was pushed. These commits have a unique ___hash___. A hash is a hexadecimal string that contains 40 characters but usually in the git graph, will only show the first 7
-
+#### Merge 
+After you are done making changes in that branch and are ready to combine those changes to the master branch, you are going to use __git checkout master__ to switch back to the master branch. Once you are back in the master branch, you are going to __merge__ the branch by running the command:
+```
+git merge branch_name
+```
 
 
-### Push: pushing changes that you made to repository; uploading changes to the servers 
-* __git push__ pushes commits to the remote repository
-* __git push <remote>__ pushes commits to a specified remote repository
-* __git push <remote> <branch>__ pushes commits to a specified branch in the remote repository
+### Stash: 
+To __stash__ allows you to save and switch to another task without having to fully commit your changes if you are not ready. Run the command:
+```
+git stash
+```
+If you want to continue working on the task you have stashed, use the command:
+```
+git stash pop
+```
 
-### Pull: pulling changes from others to keep the repository up to date; downloading the changes to the server 
-* __git pull__ fetches changes from remote repository and merges with current branch 
-* __git pull <remote>__ fetches changes from a specified remote repository and merges with current branch
 
-### Rebase: taking the commits of one branch and “replaying” it on a different branch (end of the branch). The resulting commit graph will be a singular line; the history is linear. 
-* __git pull --rebase__ will fetch the changes from the remote repository and rebases the current branch with the updated branch 
+### Push
+To __push__ means to ___upload___ any changes that you made to repository to the servers and in this case, you are uploading to Github. There are a few steps to do this process:
 
-If a merging conflict occurs while rebasing, it will stop and ask to fix each conflict one at a time to which you would then type:
-* __git add <resolved file>__
-* __git rebase --continue__
+  1. Create a remote repository on Github and copy the URL
+  2. Link repository to your computer
+```
+git remote add origin <paste_repository_URL>
+```
+  3. Push commits to Github
+```
+git push -u origin main
+```
 
-If the error still occurs, you could also use __git rebase --abort__ which will bring you back to the beginning before the rebase 
+### Pull: 
+__Pulling__ allows you to take changes from others to keep the repository up to date. You are ___downloading___ the changes to the server. To fetch the changes from the remote repository and merge with the current branch, use the command:
+```
+git pull
+```
 
+## Congratulations!
+You have finished through the tutorial! We covered some of the basic commands of Git and hopefully you were able to follow along. By practicing these commands with each project you create and collab with others, it will become part of your muscle memory. Enjoy Git!
 
